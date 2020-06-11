@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RedLava
-  m_Shader: {fileID: -6465566751694194690, guid: f9efab63b08a9d544b370d1014b4cdf1,
+  m_Shader: {fileID: -6465566751694194690, guid: 0c015c3523934bd44af0cd2004fe22cd,
     type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
@@ -20,6 +20,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_237978E1:
+        m_Texture: {fileID: 2800000, guid: 2711dd00ed265c6469c5fb5fc79fc2b0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_93F4E8FB:
+        m_Texture: {fileID: 2800000, guid: 456949f40e463974ea9b0044cff1a62f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -65,6 +73,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_177EA7D3: 0.1
+    - Vector1_39F60899: 0
+    - Vector1_52F4BB18: 1
+    - Vector1_929C876B: 0
+    - Vector1_EC0E4317: 0.24
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -91,6 +104,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_398E04B2: {r: 0.9528302, g: 0, b: 0, a: 1}
+    - Color_BE796354: {r: 1.817643, g: 0.8032898, b: 0.47155836, a: 0.39215687}
+    - Vector2_17C71C25: {r: 0, g: 0.02, b: 0, a: 0}
+    - Vector2_1E7E13F0: {r: 12, g: 12, b: 0, a: 0}
+    - Vector2_FD7CECDA: {r: 0, g: 0.005, b: 0, a: 0}
     - _BaseColor: {r: 0.7254902, g: 0.124601185, b: 0, a: 1}
     - _Color: {r: 0.7254902, g: 0.124601185, b: 0, a: 1}
     - _EmissionColor: {r: 1367.1202, g: 0, b: 0, a: 1}

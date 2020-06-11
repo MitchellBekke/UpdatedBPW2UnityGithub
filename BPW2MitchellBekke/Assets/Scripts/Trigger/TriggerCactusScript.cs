@@ -7,9 +7,9 @@ public class TriggerCactusScript : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI pressKeyText;
     public bool inTrigger = false;
+    public bool cactusCollected = false;
     public GameObject cactus;
     public GameObject jumpBoostTrigger;
-    
 
     public void Start()
     {
@@ -35,7 +35,7 @@ public class TriggerCactusScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && inTrigger)
         {
-            Debug.Log("Cactus effect");
+            cactusCollected = true;
             pressKeyText.enabled = false;
             Destroy(cactus);
             Destroy(gameObject);
