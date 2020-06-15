@@ -19,11 +19,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float oldJumpPower;
         public float newJumpPower = 10;
         public bool gameIsEnded = false;
+        public bool backtext = false;
 
         [Header("UI")]
         public TMPro.TextMeshProUGUI jumpBoostText;
         public TMPro.TextMeshProUGUI globalTimerText;
         public TMPro.TextMeshProUGUI gameEndText;
+        public TMPro.TextMeshProUGUI startText;
+        public TMPro.TextMeshProUGUI headBackText;
         public Image jumpBoostIcon;
 
         [Header("Input")]
@@ -42,6 +45,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             jumpEnhance = GameObject.Find("TriggerJumpBoost").GetComponent<JumpEnhance>();
             oldJumpPower = firstPersonController.m_JumpSpeed;
             gameEndText.enabled = false;
+            headBackText.enabled = false;
+            StartCoroutine( StartGame());
         }
         public void Update()
         {
@@ -52,6 +57,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
                 if (cactusScript.cactusCollected == true)
                 {
+                    StartCoroutine(HeadBackText());
                     endGameCollider.SetActive(true);
                     postProcessing.ColorChangeEffect();
                 }
@@ -103,6 +109,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             gameEndText.enabled = true;
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public IEnumerator StartGame()
+        {
+            startText.enabled = true;
+            yield return new WaitForSeconds(3f);
+            startText.enabled = false;
+        }
+
+        public IEnumerator HeadBackText()
+        {
+            if(backtext == false)
+            {
+                headBackText.enabled = true;
+                yield return new WaitForSeconds(2f);
+                headBackText.enabled = false;
+                backtext = true;
+            }
         }
     }
 }
